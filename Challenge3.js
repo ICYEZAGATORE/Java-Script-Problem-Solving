@@ -13,13 +13,17 @@ function findAdmins(users){
  let admins = users
     .filter((user) => user.role === "admin")
     .map((user) => user.name);
-  return admins.length > 0 ? admins : "No admins found"; 
-  // c. Modify to return message if no admins exist
+  return admins.length > 0 ? admins : "No admins found"; // c. Modify to return message if no admins exist
 }
 
-//c.
-
 //d.
+function generateWelcomeMessages(users) {
+  return users.map((user) => `Welcome, ${user.name}! You are an ${user.role}.`);
+}
+
+//e.Advantages:  
+// These methods make the code more readable and reduce the chance of errors.
 
 
-//e.//
+
+
